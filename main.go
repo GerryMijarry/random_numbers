@@ -14,6 +14,9 @@ func main() {
 
 	rand.Seed(time.Now().UnixNano())
 	args := os.Args[1:]
+	if len(args) != 1 {
+		fmt.Println("Please pick a number")
+	}
 
 	guess, err := strconv.Atoi(args[0])
 	if err != nil {
