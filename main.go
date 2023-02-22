@@ -3,10 +3,12 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func main() {
-	rand.Seed(10)
+	t := time.Now()
+	rand.Seed(t.UnixNano())
 	guess := 10
 
 	for n := 0; n != guess; {
